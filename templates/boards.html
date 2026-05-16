@@ -11,7 +11,16 @@
         </form>
         <ul>
             {% for board in boards %}
-            <li>{{ board }}</li>
+                <li>
+                    {{ board[1] }}
+                <form action="/delete/{{ board[0] }}" method="POST">
+                    <button>Delete</button>
+                </form>
+                <form action="/edit/{{ board[0] }}" method="POST">
+                    <input name="new_name"> 
+                    <button>Edit</button>
+                </form>
+                </li>
             {% endfor %}
         </ul>
     </body>
