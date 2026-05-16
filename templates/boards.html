@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My board page</title>
+    </head>
+    <body>
+        <form method="POST">
+            <input name="board_name">
+            <button>Add Board</button>
+        </form>
+        <ul>
+            {% for board in boards %}
+            <li>{{ board }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
